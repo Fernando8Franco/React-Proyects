@@ -9,12 +9,13 @@ function App () {
 
   // Get fact
   useEffect(() => {
-    fetch(CAT_ENDPOINT_RANDOM_FACT)
-      .then(res => res.json())
-      .then(data => {
-        const { fact } = data
-        setFact(fact)
-      })
+    async function getRandomCatFact () {
+      const res = await fetch(CAT_ENDPOINT_RANDOM_FACT)
+      const json = await res.json()
+      setFact(json.fact)
+    }
+
+    getRandomCatFact()
   }, [])
 
   // Get image from random fact
