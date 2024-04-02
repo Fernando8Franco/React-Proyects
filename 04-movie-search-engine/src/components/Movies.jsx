@@ -1,3 +1,13 @@
+export function Movies ({ movies }) {
+  const hasMovies = movies?.length > 0
+
+  return (
+    hasMovies
+      ? <ListOfMovies movies={movies} />
+      : <NoMoviesResults />
+  )
+}
+
 export function ListOfMovies ({ movies }) {
   return (
     <ul>
@@ -17,15 +27,5 @@ export function ListOfMovies ({ movies }) {
 export function NoMoviesResults () {
   return (
     <p>Movies not found</p>
-  )
-}
-
-export function Movies ({ movies }) {
-  const hasMovies = movies?.length > 0
-
-  return (
-    hasMovies
-      ? <ListOfMovies movies={movies} />
-      : <NoMoviesResults />
   )
 }
