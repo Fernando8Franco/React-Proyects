@@ -1,5 +1,5 @@
 {
-  "name": "08-technical-test",
+  "name": "09-test-react-query",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "5.32.0",
     "eslint-config-love": "47.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

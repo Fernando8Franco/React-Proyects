@@ -44,7 +44,8 @@ export function UsersList ({ users, showColors, handleDelete, handleChangeSort }
                 <td>
                   <button onClick={() => {
                     handleDelete(user.login.uuid)
-                  }}>Delete</button>
+                  }}>Delete
+                  </button>
                 </td>
               </tr>
             )
